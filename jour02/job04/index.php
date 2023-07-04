@@ -8,8 +8,7 @@
                 
         </head>
         <body>
-                <button id="button">Ajouter</button>
-                <p id="compteur">0</p>
+               <textarea name="" id="keylogger" cols="30" rows="10"></textarea>
         </body>
      
 </html>
