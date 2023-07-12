@@ -4,18 +4,18 @@
     <title>Accueil</title>
 </head>
 <body>
-<?php
-session_start();
+    <?php
+    session_start();
 
-// Vérifier si l'utilisateur est connecté
-if (isset($_SESSION["email"]) && $_SESSION["connected"] === true) {
-    $prenom = isset($_SESSION["prenom"]) ? $_SESSION["prenom"] : '';
-    echo "<p>Bonjour $prenom</p>";
-    echo '<a href="deconnexion.php">Déconnexion</a>';
-} else {
-    echo '<a href="inscription.php">Inscription</a> | <a href="connexion.php">Connexion</a>';
-}
-?>
-
+    // Vérification de la connexion de l'utilisateur
+    if (isset($_SESSION['prenom'])) {
+        $prenom = $_SESSION['prenom'];
+        echo "<p>Bonjour $prenom</p>";
+        echo "<a href='déconnexion.php'>Déconnexion</a>";
+    } else {
+        echo "<a href='inscription.php'>Inscription</a>";
+        echo "<a href='connexion.php'>Connexion</a>";
+    }
+    ?>
 </body>
 </html>

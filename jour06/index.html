@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Page d'accueil</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+                <link rel="stylesheet" type="text/css" href="style1.css" />
+                <link rel="stylesheet" type="text/css" href="style2.css" media="(min-width: 1680px) and (max-width: 1920px)" />
+                <link rel="stylesheet" type="text/css" href="style3.css" media="(min-width: 1280px) and (max-width: 1680px)" />
+                <link rel="stylesheet" type="text/css" href="style4.css" media="(max-width: 1280px)" />
+
+                <style>
+                        @media screen and (min-width: 1280px) and (max-width: 1680px) {
+                                link[rel="stylesheet"][href="style1.css"] {
+                                        display: none;
+                                }
+                                link[rel="stylesheet"][href="style3.css"] {
+                                        display: block;
+                                }
+                        }
+
+                        @media screen and (min-width: 1680px) and (max-width: 1920px) {
+                                link[rel="stylesheet"][href="style1.css"] {
+                                        display: none;
+                                }
+                                link[rel="stylesheet"][href="style2.css"] {
+                                        display: block;
+                                }
+                        }
+
+                        @media screen and (max-width: 1280px) {
+                                link[rel="stylesheet"][href="style1.css"] {
+                                        display: none;
+                                }
+                                link[rel="stylesheet"][href="style4.css"] {
+                                        display: block;
+                                }
+                        }
+                </style>
+        </head>
+        <body>
+                <h1>Page d'accueil</h1>
+                <p>Ceci est le contenu de la page d'accueil.</p>
+        </body>
+</html>
